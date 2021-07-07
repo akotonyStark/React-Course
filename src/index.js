@@ -1,11 +1,54 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import Tippy from '@tippy.js/react'
+import 'react-tippy/dist/tippy.css'
 import './index.css'
+import movies from './data/movieList.json'
 
-function NetFlix() {
+console.log(movies)
+
+function App() {
+  return (
+    <div className='App'>
+      <NavBar />
+      <MovieList />
+    </div>
+  )
+}
+
+function NavBar() {
   return (
     <>
-      <MovieList />
+      <div className='topnav'>
+        <a className='active' href='#home'>
+          Netflix
+        </a>
+        <a href='#news'>Home</a>
+        <a href='#Series'>Series</a>
+        <a href='#Movies'>Movies</a>
+        <div className='hiddenNav'>
+          <a href='#Originals'>Originals</a>
+          <a href='#contact'>Recently Added</a>
+          <a href='#MyList'>MyList</a>
+        </div>
+      </div>
+    </>
+  )
+}
+
+const MovieItem = (props) => {
+  //console.log(props)
+  const { img, title, year, desc } = props.movies
+  return (
+    <>
+      <div className='movie'>
+        <img
+          className='poster'
+          style={{ width: '182px', height: '268px' }}
+          src={img}
+        />
+        {props.children}
+      </div>
     </>
   )
 }
@@ -13,56 +56,29 @@ function NetFlix() {
 function MovieList() {
   return (
     <>
-      <h1>Trending Now</h1>
-      <section className='movielist'>
-        <Movie />
-        <Movie />
-        <Movie />
-        <Movie />
-        <Movie />
-        <Movie />
-        <Movie />
-        <Movie />
-        <Movie />
-      </section>
-    </>
-  )
-}
-
-const Movie = () => {
-  return (
-    <>
-      <div className='movie'>
-        <Image />
-        <Title />
-        <Description />
+      <br></br>
+      <div className='movielist'>
+        {movies.map((movie, index) => {
+          const { img, title, year, desc, children } = movie
+          return (
+            // <MovieItem key={movie.id} movies={movie}>
+            <MovieItem key={index} movies={movie}>
+              <p>
+                Lorem ipsum dolor sit amet elit adipisicing consectetur, Id,
+                modi?
+              </p>
+            </MovieItem>
+          )
+          // return <MovieItem>{movie}</MovieItem>
+        })}
       </div>
     </>
   )
 }
 
-const Title = () => {
-  return <h2>Lion King</h2>
-}
-
-const Description = () => {
-  return (
-    <h5 style={{ color: '#617d98', fontSize: '0.75rem', margin: '0.25rem' }}>
-      Simba
-    </h5>
-  )
-}
-
-const Image = () => (
-  <img
-    src='https://m.media-amazon.com/images/M/MV5BMjIwMjE1Nzc4NV5BMl5BanBnXkFtZTgwNDg4OTA1NzM@._V1_UX182_CR0,0,182,268_AL_.jpg'
-    alt='picture'
-  />
-)
-
 ReactDOM.render(
   <React.StrictMode>
-    <NetFlix />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 )

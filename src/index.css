@@ -14,11 +14,17 @@ body {
 }
 
 .movielist {
-  width: 40vw;
-  max-width: 1170px;
-  margin: 1rem auto;
+  /* gap: 2rem; */
+  /* display: grid;
+  grid-template-columns: repeat(150px, 1fr); */
+  /* background: #222; */
   display: grid;
-  gap: 2rem;
+  column-gap: 0rem;
+  row-gap: 1rem;
+  justify-items: start;
+}
+.movielist div {
+  border: 1px solid red;
 }
 
 .movie {
@@ -27,12 +33,127 @@ body {
   padding: 1rem 2rem;
 }
 
+.movie p {
+  margin-top: 0.5rem;
+}
+
+.movie :hover {
+  -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari 3-8 */
+  transform: scale(1.3);
+  transition: 1ms;
+  z-index: 1;
+}
+
+img {
+  text-align: center;
+}
+
+img :hover {
+  -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari 3-8 */
+  transform: scale(1.3);
+  transition: 1ms;
+  z-index: 1;
+}
+
+p {
+  text-align: justify;
+  width: 182px;
+}
+.movie .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #000;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.movie .tooltiptext::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+
+.movie:hover .tooltiptext {
+  visibility: visible;
+}
+
 .movie h1 {
   margin-top: 0.5rem;
 }
 
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  /* background-color: #04aa6d; */
+  color: red;
+}
+
+.hiddenNav {
+  display: block;
+}
+
+@media screen and (min-width: 400px) {
+  .movielist {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+
+  /* .movie {
+    background-color: #222;
+    border-radius: 0rem;
+    width: 350px;
+  } */
+
+  img.poster {
+    width: 100%;
+  }
+
+  .hiddenNav {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .movielist {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  /* img.poster {
+    width: '182px';
+    height: '268px';
+  } */
+
+  .hiddenNav {
+    display: block;
   }
 }
