@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom'
 import Tippy from '@tippy.js/react'
 import 'react-tippy/dist/tippy.css'
 import './index.css'
+import * as FaIcons from 'react-icons/fa'
 import movies from './data/movieList.json'
 
-console.log(movies)
+console.log({ Tippy })
 
 function App() {
   return (
@@ -36,18 +37,67 @@ function NavBar() {
   )
 }
 
+function Stars({ rating }) {
+  let num = rating
+  let temp = []
+
+  for (let i = 1; i <= num; i++) {
+    temp.push(i)
+  }
+  if (rating % 2 === 0.5 || rating % 2 === 1.5) {
+    temp.push(rating)
+  }
+
+  return (
+    <>
+      {temp.map((star) => {
+        if (star % 2 === 0.5 || star % 2 === 1.5) {
+          return <FaIcons.FaStarHalf />
+        }
+        return <FaIcons.FaStar color='yellow' />
+      })}
+    </>
+  )
+}
+
+let watchList = []
 const MovieItem = (props) => {
   //console.log(props)
-  const { img, title, year, desc } = props.movies
+  // attribute, eventHandler
+  // onclick, onMouseOver
+
+  const addToWatchlist = () => {
+    watchList.push(title)
+    console.log(watchList)
+  }
+  const { img, title, year, desc, rating } = props
   return (
     <>
       <div className='movie'>
-        <img
-          className='poster'
-          style={{ width: '182px', height: '268px' }}
-          src={img}
-        />
-        {props.children}
+        <div>
+          <img
+            alt=''
+            className='poster'
+            style={{ width: '182px', height: '268px' }}
+            src={img}
+            onClick={() => console.log(title)}
+          />
+          <span className='tooltiptext'>{desc}</span>
+          <p>
+            {title}
+            <br />
+
+            <h5 style={{ color: 'gold', margin: '7px  0' }}>Year: {year}</h5>
+            <Stars rating={rating} />
+            {/* {getRatings(movie?.rating ?? 'no rating')} */}
+            <br></br>
+            <button className='watchlistButt' onClick={addToWatchlist}>
+              {' '}
+              + Watchlist
+            </button>
+          </p>
+          {/* {props.children} */}
+        </div>
       </div>
     </>
   )
@@ -59,17 +109,12 @@ function MovieList() {
       <br></br>
       <div className='movielist'>
         {movies.map((movie, index) => {
-          const { img, title, year, desc, children } = movie
+          //const { img, title, year, desc, children } = movie
+          //console.log(movie)
           return (
             // <MovieItem key={movie.id} movies={movie}>
-            <MovieItem key={index} movies={movie}>
-              <p>
-                Lorem ipsum dolor sit amet elit adipisicing consectetur, Id,
-                modi?
-              </p>
-            </MovieItem>
+            <MovieItem key={index} {...movie}></MovieItem>
           )
-          // return <MovieItem>{movie}</MovieItem>
         })}
       </div>
     </>
