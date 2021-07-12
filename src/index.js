@@ -22,7 +22,7 @@ function NavBar() {
     <>
       <div className='topnav'>
         <a className='active' href='#home'>
-          Netflix
+          Netfakes
         </a>
         <a href='#news'>Home</a>
         <a href='#Series'>Series</a>
@@ -66,14 +66,20 @@ const MovieItem = (props) => {
   // attribute, eventHandler
   // onclick, onMouseOver
 
-  const addToWatchlist = () => {
+  const addToWatchlist = (e) => {
     watchList.push(title)
     console.log(watchList)
+    console.log(e.target)
   }
   const { img, title, year, desc, rating } = props
   return (
     <>
-      <div className='movie'>
+      <div
+        className='movie'
+        onMouseOver={() => {
+          console.log(title)
+        }}
+      >
         <div>
           <img
             alt=''

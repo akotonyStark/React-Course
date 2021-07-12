@@ -16,6 +16,14 @@
     "rating": 4
   },
   {
+    "id": 20,
+    "title": "The Godfather II",
+    "year": 1974,
+    "desc": "Al Paccino",
+    "img": "https://i.pinimg.com/736x/4e/3f/41/4e3f41bab342202c89c677305ef4071c.jpg",
+    "rating": 5
+  },
+  {
     "id": 3,
     "title": "Fatherhood",
     "year": 2021,
@@ -26,11 +34,11 @@
 
   {
     "id": 4,
-    "title": "12 years a slave",
-    "year": 2013,
-    "desc": "Chiwetel Ejiofor",
-    "img": "https://upload.wikimedia.org/wikipedia/en/b/b3/12_Years_a_Slave_Soundtrack.png",
-    "rating": 1.5
+    "title": "Titanic",
+    "year": 1994,
+    "desc": "Leonardo Di Caprio",
+    "img": "https://i.pinimg.com/564x/a8/cf/96/a8cf9632d74abb1aafa4f54beb6ed604.jpg",
+    "rating": 5
   },
   {
     "id": 5,
@@ -41,31 +49,15 @@
     "rating": 3.5
   },
   {
+    "id": 13,
+    "title": "Green Book",
+    "year": 2020,
+    "desc": "Viggo Mortenson",
+    "img": "https://images-na.ssl-images-amazon.com/images/I/61Z6bxl6JsL._AC_SL1204_.jpg",
+    "rating": 4.5
+  },
+  {
     "id": 6,
-    "title": "The Fash",
-    "year": 2015,
-    "desc": "Run Barry run",
-    "img": "https://upload.wikimedia.org/wikipedia/en/2/2e/The_Flash_season_6.jpg",
-    "rating": 4.5
-  },
-  {
-    "id": 7,
-    "title": "12 years a slave",
-    "year": 2013,
-    "desc": "Chiwetel Ejiofor",
-    "img": "https://upload.wikimedia.org/wikipedia/en/b/b3/12_Years_a_Slave_Soundtrack.png",
-    "rating": 4.5
-  },
-  {
-    "id": 8,
-    "title": "Lion King",
-    "year": 1993,
-    "desc": "Simba regains his throne",
-    "img": "https://m.media-amazon.com/images/M/MV5BMjIwMjE1Nzc4NV5BMl5BanBnXkFtZTgwNDg4OTA1NzM@._V1_UX182_CR0,0,182,268_AL_.jpg",
-    "rating": 5
-  },
-  {
-    "id": 9,
     "title": "The Fash",
     "year": 2015,
     "desc": "Run Barry run",
@@ -73,81 +65,107 @@
     "rating": 3.5
   },
   {
+    "id": 7,
+    "title": "Pulp Fiction",
+    "year": 1994,
+    "desc": "A Quentin Tarantino movie",
+    "img": "https://images-na.ssl-images-amazon.com/images/I/81UTs3sC5hL._SL1500_.jpg",
+    "rating": 4.5
+  },
+  {
+    "id": 8,
+    "title": "It's a wonderful life",
+    "year": 1946,
+    "desc": "James Stewart",
+    "img": "https://images-na.ssl-images-amazon.com/images/I/91K2trfdlPL._SL1500_.jpg",
+    "rating": 5
+  },
+  {
+    "id": 9,
+    "title": "Manchester by the sea",
+    "year": 2016,
+    "desc": "Cassie Affleck",
+    "img": "https://i.pinimg.com/originals/74/32/16/743216df27cbf3100c062ed195c3e20d.png",
+    "rating": 5
+  },
+  {
     "id": 10,
-    "title": "12 years a slave",
-    "year": 2013,
-    "desc": "Chiwetel Ejiofor",
-    "img": "https://upload.wikimedia.org/wikipedia/en/b/b3/12_Years_a_Slave_Soundtrack.png"
+    "title": "Back to the future",
+    "year": 1985,
+    "desc": "Marty Macfly",
+    "img": "https://upload.wikimedia.org/wikipedia/en/c/c2/Back_to_the_Future_Part_II.jpg"
   },
   {
     "id": 11,
-    "title": "Forest Gump",
-    "year": 1994,
-    "desc": "Tom Hanks",
-    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzJry_UKa2nOSn2qOd_wwf2IN0ZAowKKuCBURfD2QV2V22SeERP1wury6qDR-o9lyp300&usqp=CAU"
+    "title": "Training Day",
+    "year": 2001,
+    "desc": "Denzel Washington",
+    "img": "https://m.media-amazon.com/images/M/MV5BMDZkMTUxYWEtMDY5NS00ZTA5LTg3MTItNTlkZWE1YWRjYjMwL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",
+    "rating": 5
   },
   {
     "id": 12,
-    "title": "Fatherhood",
-    "year": 2021,
-    "desc": "Kevin Hart",
-    "img": "https://www.grandcentralpublishing.com/wp-content/uploads/2021/03/9781538734407.jpg?fit=492%2C750"
-  },
-  {
-    "id": 13,
-    "title": "Lion King",
-    "year": 1993,
-    "desc": "Simba regains his throne",
-    "img": "https://m.media-amazon.com/images/M/MV5BMjIwMjE1Nzc4NV5BMl5BanBnXkFtZTgwNDg4OTA1NzM@._V1_UX182_CR0,0,182,268_AL_.jpg"
+    "title": "The Notebook",
+    "year": 2004,
+    "desc": "Ryan Gosling",
+    "img": "https://images-na.ssl-images-amazon.com/images/I/51CU%2Bl6dyQL._AC_.jpg",
+    "rating": 5
   },
 
   {
     "id": 14,
-    "title": "The Fash",
-    "year": 2015,
-    "desc": "Run Barry run",
-    "img": "https://upload.wikimedia.org/wikipedia/en/2/2e/The_Flash_season_6.jpg"
+    "title": "Infinity War",
+    "year": 2018,
+    "desc": "Avengers Infinity War",
+    "img": "https://i.ebayimg.com/images/g/VpQAAOSwHvpa7zbY/s-l300.jpg",
+    "rating": 5
   },
   {
     "id": 15,
-    "title": "Lion King",
-    "year": 1993,
-    "desc": "Simba regains his throne",
-    "img": "https://m.media-amazon.com/images/M/MV5BMjIwMjE1Nzc4NV5BMl5BanBnXkFtZTgwNDg4OTA1NzM@._V1_UX182_CR0,0,182,268_AL_.jpg"
+    "title": "Naruto",
+    "year": 2005,
+    "desc": "Raseeeengaann",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRruSn4cGMNqLqJt7w_83pbpmxrXhBztwG_rw&usqp=CAU",
+    "rating": 5
   },
   {
     "id": 16,
-    "title": "Fatherhood",
+    "title": "The little things",
     "year": 2021,
-    "desc": "Kevin Hart",
-    "img": "https://www.grandcentralpublishing.com/wp-content/uploads/2021/03/9781538734407.jpg?fit=492%2C750"
+    "desc": "Denzel Washington",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKrxc4x-_B-4bg4Amjbdxq4QbOaYyYcY5M26N4nKnaNrnrEw9VM3jwzxWZP3EX7I3g0pQ&usqp=CAU",
+    "rating": 4
   },
   {
     "id": 17,
     "title": "Forest Gump",
     "year": 1994,
     "desc": "Tom Hanks",
-    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzJry_UKa2nOSn2qOd_wwf2IN0ZAowKKuCBURfD2QV2V22SeERP1wury6qDR-o9lyp300&usqp=CAU"
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzJry_UKa2nOSn2qOd_wwf2IN0ZAowKKuCBURfD2QV2V22SeERP1wury6qDR-o9lyp300&usqp=CAU",
+    "rating": 5
   },
   {
     "id": 18,
-    "title": "Lion King",
-    "year": 1993,
-    "desc": "Simba regains his throne",
-    "img": "https://m.media-amazon.com/images/M/MV5BMjIwMjE1Nzc4NV5BMl5BanBnXkFtZTgwNDg4OTA1NzM@._V1_UX182_CR0,0,182,268_AL_.jpg"
+    "title": "Old Guard",
+    "year": 2020,
+    "desc": "Charlize Theron",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa1FqfzuNmji2ySZQm6VilCw6NZjomDiaMAm4W-wdCggjonN2dnuzHmjPZZ1Kn0UfDw4I&usqp=CAU",
+    "rating": 3
   },
   {
     "id": 19,
-    "title": "The Fash",
+    "title": "Rick and Morty",
     "year": 2015,
-    "desc": "Run Barry run",
-    "img": "https://upload.wikimedia.org/wikipedia/en/2/2e/The_Flash_season_6.jpg"
+    "desc": "Rick and Morty",
+    "img": "https://images-na.ssl-images-amazon.com/images/I/71qvSXrQX0L._AC_SY679_.jpg",
+    "rating": 5
   },
   {
-    "id": 20,
-    "title": "Fatherhood",
+    "id": 21,
+    "title": "Soul",
     "year": 2021,
-    "desc": "Kevin Hart",
-    "img": "https://www.grandcentralpublishing.com/wp-content/uploads/2021/03/9781538734407.jpg?fit=492%2C750"
+    "desc": "Disney Pixar",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOj8wkaOTI69_qZepF-UIiOwAMgksXylfXRw&usqp=CAU",
+    "rating": 5
   }
 ]
