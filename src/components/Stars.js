@@ -1,4 +1,6 @@
-function Stars({ rating }) {
+import * as FaIcons from 'react-icons/fa'
+
+export default function Stars({ rating }) {
   let num = rating
   let temp = []
 

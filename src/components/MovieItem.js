@@ -1,3 +1,7 @@
+import Stars from './Stars'
+import * as FaIcons from 'react-icons/fa'
+
+let watchList = []
 const MovieItem = (props) => {
   //console.log(props)
   // attribute, eventHandler
@@ -8,20 +12,21 @@ const MovieItem = (props) => {
     console.log(watchList)
     console.log(e.target)
   }
-  const { img, title, year, desc, rating } = props
+
+  const { id, img, title, year, desc, rating } = props
   return (
     <>
       <div
         className='movie'
         onMouseOver={() => {
-          console.log(title)
+          //console.log(title)
         }}
       >
         <div>
           <img
             alt=''
             className='poster'
-            style={{ width: '182px', height: '268px' }}
+            style={{ width: 'auto', maxWidth: '182px', height: '268px' }}
             src={img}
             onClick={() => console.log(title)}
           />
@@ -35,8 +40,25 @@ const MovieItem = (props) => {
             {/* {getRatings(movie?.rating ?? 'no rating')} */}
             <br></br>
             <button className='watchlistButt' onClick={addToWatchlist}>
-              {' '}
               + Watchlist
+            </button>
+            <button
+              style={{ float: 'right' }}
+              className='watchlistButt'
+              onClick={() => {
+                props.removeItem(id)
+              }}
+            >
+              Uninterested
+            </button>
+            <button
+              className='onlyMeButt'
+              onClick={() => {
+                props.playPreview(id)
+              }}
+            >
+              {' '}
+              <FaIcons.FaPlay color='darkred' /> View Trailer
             </button>
           </p>
           {/* {props.children} */}
@@ -45,3 +67,5 @@ const MovieItem = (props) => {
     </>
   )
 }
+
+export default MovieItem

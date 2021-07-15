@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom'
 import Tippy from '@tippy.js/react'
 import 'react-tippy/dist/tippy.css'
 import './index.css'
-import * as FaIcons from 'react-icons/fa'
-import movies from './data/movieList.json'
+import data from './data/movieList.json'
+import NavBar from './components/NavBar'
+import MovieItem from './components/MovieItem'
 
 console.log({ Tippy })
 
@@ -17,99 +18,20 @@ function App() {
   )
 }
 
-function NavBar() {
-  return (
-    <>
-      <div className='topnav'>
-        <a className='active' href='#home'>
-          Netfakes
-        </a>
-        <a href='#news'>Home</a>
-        <a href='#Series'>Series</a>
-        <a href='#Movies'>Movies</a>
-        <div className='hiddenNav'>
-          <a href='#Originals'>Originals</a>
-          <a href='#contact'>Recently Added</a>
-          <a href='#MyList'>MyList</a>
-        </div>
-      </div>
-    </>
-  )
-}
-
-function Stars({ rating }) {
-  let num = rating
-  let temp = []
-
-  for (let i = 1; i <= num; i++) {
-    temp.push(i)
-  }
-  if (rating % 2 === 0.5 || rating % 2 === 1.5) {
-    temp.push(rating)
-  }
-
-  return (
-    <>
-      {temp.map((star) => {
-        if (star % 2 === 0.5 || star % 2 === 1.5) {
-          return <FaIcons.FaStarHalf />
-        }
-        return <FaIcons.FaStar color='yellow' />
-      })}
-    </>
-  )
-}
-
-let watchList = []
-const MovieItem = (props) => {
-  //console.log(props)
-  // attribute, eventHandler
-  // onclick, onMouseOver
-
-  const addToWatchlist = (e) => {
-    watchList.push(title)
-    console.log(watchList)
-    console.log(e.target)
-  }
-  const { img, title, year, desc, rating } = props
-  return (
-    <>
-      <div
-        className='movie'
-        onMouseOver={() => {
-          console.log(title)
-        }}
-      >
-        <div>
-          <img
-            alt=''
-            className='poster'
-            style={{ width: '182px', height: '268px' }}
-            src={img}
-            onClick={() => console.log(title)}
-          />
-          <span className='tooltiptext'>{desc}</span>
-          <p>
-            {title}
-            <br />
-
-            <h5 style={{ color: 'gold', margin: '7px  0' }}>Year: {year}</h5>
-            <Stars rating={rating} />
-            {/* {getRatings(movie?.rating ?? 'no rating')} */}
-            <br></br>
-            <button className='watchlistButt' onClick={addToWatchlist}>
-              {' '}
-              + Watchlist
-            </button>
-          </p>
-          {/* {props.children} */}
-        </div>
-      </div>
-    </>
-  )
-}
-
 function MovieList() {
+  const [movies, setMovies] = React.useState(data)
+
+  const removeItem = (id) => {
+    let remainingMovies = movies.filter((movie) => movie.id !== id)
+    setMovies(remainingMovies)
+  }
+
+  const playPreview = (id) => {
+    let selectedMovie = movies.filter((movie) => movie.id === id)
+    //setMovies(selectedMovie)
+    console.log(selectedMovie)
+  }
+
   return (
     <>
       <br></br>
@@ -119,7 +41,12 @@ function MovieList() {
           //console.log(movie)
           return (
             // <MovieItem key={movie.id} movies={movie}>
-            <MovieItem key={index} {...movie}></MovieItem>
+            <MovieItem
+              key={index}
+              {...movie}
+              removeItem={removeItem}
+              playPreview={playPreview}
+            ></MovieItem>
           )
         })}
       </div>
