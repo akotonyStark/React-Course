@@ -3,9 +3,8 @@ import ReactDOM from 'react-dom'
 import Tippy from '@tippy.js/react'
 import 'react-tippy/dist/tippy.css'
 import './index.css'
-import data from './data/movieList.json'
 import NavBar from './components/NavBar'
-import MovieItem from './components/MovieItem'
+import MovieList from './components/MovieList'
 
 console.log({ Tippy })
 
@@ -15,43 +14,6 @@ function App() {
       <NavBar />
       <MovieList />
     </div>
-  )
-}
-
-//movie List component
-function MovieList() {
-  const [movies, setMovies] = React.useState(data)
-
-  const removeItem = (id) => {
-    let remainingMovies = movies.filter((movie) => movie.id !== id)
-    setMovies(remainingMovies)
-  }
-
-  const playPreview = (id) => {
-    let selectedMovie = movies.filter((movie) => movie.id === id)
-    //setMovies(selectedMovie)
-    console.log(selectedMovie)
-  }
-
-  return (
-    <>
-      <br></br>
-      <div className='movielist'>
-        {movies.map((movie, index) => {
-          //const { img, title, year, desc, children } = movie
-          //console.log(movie)
-          return (
-            // <MovieItem key={movie.id} movies={movie}>
-            <MovieItem
-              key={index}
-              {...movie}
-              removeItem={removeItem}
-              playPreview={playPreview}
-            ></MovieItem>
-          )
-        })}
-      </div>
-    </>
   )
 }
 
