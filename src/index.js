@@ -18,6 +18,7 @@ function App() {
   )
 }
 
+//movie List component
 function MovieList() {
   const [movies, setMovies] = React.useState(data)
 
