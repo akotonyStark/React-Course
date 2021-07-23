@@ -11,6 +11,7 @@ const MovieItem = (props) => {
     watchList.push(title)
     console.log(watchList)
     console.log(e.target)
+    //document.title = title
   }
 
   const { id, img, title, year, desc, rating } = props
@@ -28,6 +29,7 @@ const MovieItem = (props) => {
             className='poster'
             style={{ width: 'auto', maxWidth: '182px', height: '268px' }}
             src={img}
+            alt='poster'
             onClick={() => console.log(title)}
           />
           <span className='tooltiptext'>{desc}</span>

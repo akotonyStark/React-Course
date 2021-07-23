@@ -193,11 +193,16 @@ p {
   .userProfile {
     text-align: right;
     overflow: hidden;
+    float: right;
+    text-decoration: none;
+    font-size: 17px;
+    display: 'inline-block';
     margin: 10px;
   }
 
   .profilePic {
     width: 30px;
     border-radius: 50%;
+    display: 'inline-block';
   }
 }
