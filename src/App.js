@@ -24,6 +24,7 @@ const flash = {
   desc: 'Run Barry run',
   img: 'https://upload.wikimedia.org/wikipedia/en/2/2e/The_Flash_season_6.jpg',
 }
+
 function NetFlix() {
   return (
     <>

@@ -5,6 +5,7 @@ import 'react-tippy/dist/tippy.css'
 import './index.css'
 import NavBar from './components/NavBar'
 import MovieList from './components/MovieList'
+import Login from './components/Login'
 
 console.log({ Tippy })
 
@@ -12,7 +13,8 @@ function App() {
   return (
     <div className='App'>
       <NavBar />
-      <MovieList />
+      {/* <MovieList /> */}
+      <Login />
     </div>
   )
 }

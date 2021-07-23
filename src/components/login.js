@@ -1,8 +1,14 @@
 const Login = () => {
+  const handleSubmit = (e) => {
+    //preventDefaults prevents the page from auto refresh on submit
+    e.preventDefault()
+    console.log('hello world')
+  }
+
   return (
     <>
-      <article>
-        <form className='form'>
+      <article style={{ textAlign: 'center' }}>
+        <form className='form' onSubmit={handleSubmit}>
           <div className='form-control'>
             <label htmlFor='username'>Username: </label>
             <input type='text' id='username' name='username' />
