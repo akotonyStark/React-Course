@@ -12,7 +12,7 @@ console.log({ Tippy })
 function App() {
   return (
     <div className='App'>
-      <NavBar />
+      {/* <NavBar /> */}
       {/* <MovieList /> */}
       <Login />
     </div>

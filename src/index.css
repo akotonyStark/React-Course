@@ -24,6 +24,27 @@ body {
   row-gap: 1rem;
   justify-items: start;
 }
+
+.users {
+  /* gap: 2rem; */
+  /* display: grid;
+  grid-template-columns: repeat(150px, 1fr); */
+  background: #222;
+  display: grid;
+  column-gap: 0rem;
+  row-gap: 0rem;
+  justify-items: start;
+  padding: 20px;
+  width: 60%;
+  margin-top: 200px;
+  /* border: 1px solid red; */
+}
+
+.users img {
+  border: 1px solid #e3e3e3;
+  height: 220px;
+  width: 200px;
+}
 /* .movielist div {
   border: 1px solid red;
 } */
@@ -135,6 +156,15 @@ p {
     justify-items: center;
   }
 
+  .users {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    justify-items: center;
+    margin: 0 auto;
+    margin-top: 200px;
+    /* width: 50%; */
+  }
+
   .movie {
     background-color: #222;
     border-radius: 0rem;
@@ -181,10 +211,14 @@ p {
     grid-template-columns: repeat(7, 1fr);
   }
 
-  /* img.poster {
-    width: '182px';
-    height: '268px';
-  } */
+  .users {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    justify-items: center;
+    margin: 0 auto;
+    margin-top: 200px;
+    /* width: 50%; */
+  }
 
   .hiddenNav {
     display: block;
@@ -204,5 +238,56 @@ p {
     width: 30px;
     border-radius: 50%;
     display: 'inline-block';
+  }
+
+  .form {
+    background: #ffffff14;
+    max-width: 40%;
+    margin: 50px auto;
+    margin-bottom: 4rem;
+    padding: 1rem 2rem;
+    border-radius: var(--radius);
+  }
+  .form input {
+    /* background: var(--clr-grey-10); */
+    border-color: transparent;
+    border-radius: var(--radius);
+    padding: 0.25rem 0.5rem;
+  }
+  .form-control {
+    margin: 0.5rem 0;
+    display: grid;
+    /* grid-template-columns: 100px 1fr; */
+    align-items: center;
+  }
+
+  .form button {
+    background-color: #ffffff14;
+    color: cadetblue;
+    width: 100%;
+    border-radius: 5px;
+    height: 30px;
+    margin-top: 5px;
+    border: none;
+    font-size: small;
+    cursor: pointer;
+  }
+
+  .manageProfileButton {
+    background-color: #ffffff14;
+    color: white;
+    width: 10%;
+    border-radius: 0px;
+    height: 50px;
+    margin-top: 5px;
+    border: none;
+    font-size: small;
+    cursor: pointer;
+    margin: 0;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
 }
