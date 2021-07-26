@@ -12,6 +12,8 @@ body {
   background: #000;
   color: #f1f5f8;
   overflow-x: hidden;
+  /* background-image: url('https://hcdevilsadvocate.com/wp-content/uploads/2019/01/netflix-background-9-900x506.jpg');
+  background-repeat: round; */
 }
 
 .movielist {
@@ -162,6 +164,7 @@ p {
     justify-items: center;
     margin: 0 auto;
     margin-top: 200px;
+    width: 100%;
     /* width: 50%; */
   }
 
@@ -217,6 +220,7 @@ p {
     justify-items: center;
     margin: 0 auto;
     margin-top: 200px;
+    width: 60%;
     /* width: 50%; */
   }
 
@@ -242,15 +246,18 @@ p {
 
   .form {
     background: #ffffff14;
-    max-width: 40%;
-    margin: 50px auto;
+    /* opacity: 90%; */
+    max-width: 30%;
+    height: 400px;
+    margin: 100px auto;
     margin-bottom: 4rem;
-    padding: 1rem 2rem;
+    padding: 1rem 4rem;
     border-radius: var(--radius);
   }
   .form input {
     /* background: var(--clr-grey-10); */
     border-color: transparent;
+    height: 40px;
     border-radius: var(--radius);
     padding: 0.25rem 0.5rem;
   }
@@ -262,11 +269,11 @@ p {
   }
 
   .form button {
-    background-color: #ffffff14;
-    color: cadetblue;
+    background-color: darkred;
+    color: white;
     width: 100%;
     border-radius: 5px;
-    height: 30px;
+    height: 40px;
     margin-top: 5px;
     border: none;
     font-size: small;

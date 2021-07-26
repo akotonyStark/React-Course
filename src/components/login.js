@@ -38,7 +38,12 @@ const Login = () => {
       <article>
         {!isLoggedIn ? (
           <form className='form' onSubmit={handleLogin}>
-            <div className='form-control'>
+            <h1>Sign In</h1>
+            <p style={{ color: '#cecece', fontSize: '12px' }}>Username: user</p>
+            <p style={{ color: '#cecece', fontSize: '12px' }}>
+              Password: password
+            </p>
+            <div className='form-control' style={{ marginTop: '50px' }}>
               {/* <label htmlFor='username'>Username: </label> */}
               <input
                 type='text'
@@ -49,7 +54,7 @@ const Login = () => {
                 onChange={(e) => setUsername(e.target.value)}
               />
             </div>
-            <div className='form-control'>
+            <div className='form-control' style={{ marginTop: '20px' }}>
               {/* <label htmlFor='password'>Password: </label> */}
               <input
                 type='password'
@@ -61,7 +66,11 @@ const Login = () => {
               />
             </div>
 
-            <button className='onlyMeButt' type='submit'>
+            <button
+              className='onlyMeButt'
+              type='submit'
+              style={{ marginTop: '50px' }}
+            >
               Login
             </button>
           </form>
