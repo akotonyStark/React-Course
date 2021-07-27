@@ -152,37 +152,6 @@ p {
   margin-top: 100px;
 }
 
-@media screen and (min-width: 400px) {
-  .movielist {
-    grid-template-columns: repeat(1, 1fr);
-    justify-items: center;
-  }
-
-  .users {
-    grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
-    justify-items: center;
-    margin: 0 auto;
-    margin-top: 200px;
-    width: 100%;
-    /* width: 50%; */
-  }
-
-  .movie {
-    background-color: #222;
-    border-radius: 0rem;
-    /* width: 350px; */
-  }
-
-  img.poster {
-    width: 100%;
-  }
-
-  .hiddenNav {
-    display: none;
-  }
-}
-
 .watchlistButt {
   background-color: #ffffff14;
   color: cadetblue;
@@ -207,6 +176,118 @@ p {
 
 .watchlistButt .onlyMeButt :hover {
   color: goldenrod;
+}
+
+@media screen and (min-width: 400px) {
+  .movielist {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+
+  .users {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    justify-items: center;
+    margin: 0 auto;
+    margin-top: 200px;
+    width: 100%;
+    /* width: 50%; */
+  }
+
+  .hiddenNav {
+    display: none;
+  }
+
+  .movie {
+    background-color: #222;
+    border-radius: 0rem;
+    /* width: 350px; */
+  }
+
+  img.poster {
+    width: 100%;
+  }
+
+  .users {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    justify-items: center;
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 60%;
+    /* width: 50%; */
+  }
+
+  .userProfile {
+    text-align: right;
+    overflow: hidden;
+    float: right;
+    text-decoration: none;
+    font-size: 17px;
+    display: 'inline-block';
+    margin: 10px;
+  }
+
+  .profilePic {
+    width: 30px;
+    border-radius: 50%;
+    display: 'inline-block';
+  }
+
+  .form {
+    background: #ffffff14;
+    /* opacity: 90%; */
+    max-width: 30%;
+    height: 400px;
+    margin: 50px auto;
+    margin-bottom: 4rem;
+    padding: 1rem 4rem;
+    border-radius: var(--radius);
+  }
+  .form input {
+    /* background: var(--clr-grey-10); */
+    border-color: transparent;
+    height: 40px;
+    border-radius: var(--radius);
+    padding: 0.25rem 0.5rem;
+  }
+  .form-control {
+    margin: 0.5rem 0;
+    display: grid;
+    /* grid-template-columns: 100px 1fr; */
+    align-items: center;
+  }
+
+  .form button {
+    background-color: darkred;
+    color: white;
+    width: 100%;
+    border-radius: 5px;
+    height: 40px;
+    margin-top: 5px;
+    border: none;
+    font-size: small;
+    cursor: pointer;
+  }
+
+  .manageProfileButton {
+    display: none;
+    background-color: #ffffff14;
+    color: white;
+    width: 10%;
+    border-radius: 0px;
+    height: 50px;
+    margin-top: 5px;
+    border: none;
+    font-size: small;
+    cursor: pointer;
+    margin: 0;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -281,6 +362,7 @@ p {
   }
 
   .manageProfileButton {
+    display: block;
     background-color: #ffffff14;
     color: white;
     width: 10%;

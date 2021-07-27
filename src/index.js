@@ -6,6 +6,7 @@ import './index.css'
 import NavBar from './components/NavBar'
 import MovieList from './components/MovieList'
 import Login from './components/Login'
+import SignUp from './components/SignUp'
 
 console.log({ Tippy })
 
@@ -14,7 +15,8 @@ function App() {
     <div className='App'>
       {/* <NavBar /> */}
       {/* <MovieList /> */}
-      <Login />
+      {/* <Login /> */}
+      <SignUp />
     </div>
   )
 }
