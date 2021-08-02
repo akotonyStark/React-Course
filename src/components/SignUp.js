@@ -1,10 +1,16 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useReducer, useRef } from 'react'
+
+const reducer = (state, action) => {}
+
+const defaultState = {}
 
 export default function SignUp() {
   const emailRef = useRef(null)
   const usernameRef = useRef(null)
   const passwordRef = useRef(null)
   const divContainer = useRef(null)
+
+  const [state, dispatch] = useReducer(reducer, defaultState)
 
   const handleSignup = (e) => {
     e.preventDefault()
